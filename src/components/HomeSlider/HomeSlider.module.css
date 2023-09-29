@@ -1,0 +1,25 @@
+.slide {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+.iconAddUser {
+  transform: rotate(-27.439deg);
+}
+.icon {
+}
+.text {
+  position: absolute;
+  left: 44px;
+  bottom: 10px;
+
+  margin: 0;
+
+  color: #3a2302;
+  font-family: Ingrid Darling;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

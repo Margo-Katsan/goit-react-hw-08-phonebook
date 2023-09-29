@@ -1,0 +1,44 @@
+.mainTitle {
+  margin: 0;
+
+  font-family: 'Mate SC';
+  text-align: center;
+}
+.form {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+
+  font-family: 'Mate SC';
+}
+.label {
+  min-width: 100px;
+
+  font-weight: 700;
+}
+.input {
+  width: 100px;
+
+  background-color: #d9d9d9;
+  border: 0;
+}
+.submit {
+  width: 0;
+  height: 0;
+  border: 0;
+  padding: 0;
+
+  cursor: pointer;
+}
+.submit:hover {
+  box-shadow: inset 0px 4px 13px 1px rgba(151, 115, 145, 0.76);
+}
+.error {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: red;
+}

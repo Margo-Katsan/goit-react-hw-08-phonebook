@@ -1,0 +1,44 @@
+.contact {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.container {
+  display: flex;
+  padding-left: 30px;
+  width: 300px;
+  height: 100px;
+  clip-path: polygon(
+    0% 0%,
+    40% 4%,
+    100% 1%,
+    96% 37%,
+    100% 98%,
+    76% 94%,
+    0% 99%,
+    5% 70%
+  );
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.contact:not(:last-child) {
+  margin-bottom: 14px;
+}
+.name {
+  margin: 0;
+  font-weight: 700;
+}
+.number {
+  margin: 0;
+}
+.delBtn {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+.delBtn:hover {
+  box-shadow: inset 0px 4px 13px 1px rgba(151, 115, 145, 0.76);
+}
