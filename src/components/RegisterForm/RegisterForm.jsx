@@ -30,7 +30,7 @@ export const RegisterForm = () => {
       <label className={css.label}>
           <input className={`${css.input} ${css.inputPassword}`} type="password" name="password" placeholder="Password"/>
       </label>
-      <button className={css.btn} type="submit">Register</button>
+      <button className={css.btn} type="submit">Sing in</button>
     </form>
     </div>
     

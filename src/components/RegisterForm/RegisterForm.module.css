@@ -17,7 +17,7 @@
   text-align: center;
 }
 .input {
-  background-color: #d9d9d9;
+  background-color: #e7e7e7;
   border: 1px solid #8c8375;
   border-radius: 10px;
   padding-left: 20px;
@@ -34,6 +34,8 @@
 
 .btn {
   border-radius: 3px;
+  padding: 5px 10px;
+  width: 100px;
   background: #3a2302;
   color: #d9d9d9;
   text-align: center;

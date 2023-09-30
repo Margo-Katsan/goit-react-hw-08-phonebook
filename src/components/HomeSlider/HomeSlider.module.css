@@ -5,22 +5,30 @@
   justify-content: center;
 }
 .iconAddUser {
-  transform: rotate(-27.439deg);
 }
 .icon {
   stroke: white;
 }
 .text {
   position: absolute;
-  left: 44px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
   bottom: 10px;
-
+  width: 350px;
   margin: 0;
 
   color: #3a2302;
   font-family: 'Mate SC';
-  font-size: 48px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.textChange {
+}
+@media screen and (max-width: 335px) {
+  .text {
+    width: 200px;
+  }
 }

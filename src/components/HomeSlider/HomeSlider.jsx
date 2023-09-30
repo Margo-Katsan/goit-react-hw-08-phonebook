@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { ImUserPlus } from 'react-icons/im';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
-import { GrEdit } from 'react-icons/gr';
+import { PiNotePencilBold } from 'react-icons/pi';
 import { GiArchiveResearch } from 'react-icons/gi';
 import css from './HomeSlider.module.css'
 
@@ -22,30 +22,34 @@ export const HomeSlider = () => {
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 40,
-          },
+            spaceBetween: 30,
+        },
+        1050: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
         }}
-      autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-      }}
-      modules={[Autoplay]}
+      // autoplay={{
+      //     delay: 2500,
+      //     disableOnInteraction: false,
+      // }}
+      // modules={[Autoplay]}
     >
       <SwiperSlide style={{display: 'flex', justifyContent: 'center'}} className={css.slide}>
         <ImUserPlus className={`${css.icon} ${css.iconAddUser}`} size={280} color='white' />
-        <p className={css.text}>Add a contact to your phone book</p>
+        <p className={`${css.text} ${css.textAdd}`}>Add a contact to your phone book</p>
       </SwiperSlide>
       <SwiperSlide style={{display: 'flex', justifyContent: 'center'}} className={css.slide}>
-        <GrEdit className={css.icon} size={240} color='white' />
-        <p className={css.text}>Change a contact's name or phone number</p>
+        <PiNotePencilBold className={css.icon} size={280} color='white' />
+        <p className={`${css.text} ${css.textChange}`}>Change a contact's name or phone number</p>
       </SwiperSlide>
       <SwiperSlide style={{display: 'flex', justifyContent: 'center'}} className={css.slide}>
-        <RiDeleteBin5Fill className={css.icon} size={240} color='white' />
-        <p className={css.text}>Delete a contact from your phone book</p>
+        <RiDeleteBin5Fill className={css.icon} size={280} color='white' />
+        <p className={`${css.text} ${css.textDelete}`}>Delete a contact from your phone book</p>
       </SwiperSlide>
       <SwiperSlide style={{display: 'flex', justifyContent: 'center'}} className={css.slide}>
-        <GiArchiveResearch className={css.icon} size={240} color='white' />
-        <p className={css.text}>Search for a contact by name</p>
+        <GiArchiveResearch className={css.icon} size={280} color='white' />
+        <p className={`${css.text} ${css.textSearch}`}>Search for a contact by name</p>
       </SwiperSlide>
     </Swiper>
   );

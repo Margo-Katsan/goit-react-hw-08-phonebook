@@ -1,7 +1,7 @@
 .contact {
   position: relative;
   font-family: 'Mate SC';
-  max-width: 100%;
+  width: 100%;
 }
 .container {
   display: flex;
@@ -25,7 +25,7 @@
 .name {
   margin: 0;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 8.4px;
 }
 .number {
   margin: 0;
@@ -51,9 +51,17 @@
   right: 50px;
   bottom: 30px;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 768px) {
   .contact {
-    width: 350px;
+    width: calc((100% - 1 * 24px) / 2);
+  }
+  .contact:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    width: calc((100% - 2 * 24px) / 3);
   }
   .contact:not(:last-child) {
     margin-bottom: 0;

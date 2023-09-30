@@ -1,8 +1,9 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 20px;
   font-family: 'Mate SC';
 }
 .label {
@@ -13,6 +14,7 @@
   font-family: 'Mate SC';
   font-size: 16px;
   padding: 0;
+  line-height: 1.15;
 }
 .input:focus {
   outline: none;
