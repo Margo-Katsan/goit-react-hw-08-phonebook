@@ -1,2 +1,16 @@
-.linkHome {
+.authNav {
+  display: flex;
+  gap: 10px;
+}
+.link {
+  font-family: 'Mate SC';
+
+  text-decoration: none;
+  color: #d9d9d9;
+  border-radius: 3px;
+  padding: 3px;
+  &:global.active {
+    color: #3a2302;
+    background-color: #d9d9d9;
+  }
 }

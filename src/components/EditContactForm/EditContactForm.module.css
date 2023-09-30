@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-family: 'Mate SC';
+}
+.label {
+}
+.input {
+  background-color: transparent;
+  border: 0;
+  font-family: 'Mate SC';
+  font-size: 16px;
+  padding: 0;
+}
+.input:focus {
+  outline: none;
+}
+.inputName {
+  font-weight: 700;
+}
+.btn {
+  position: absolute;
+  top: 10%;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+.closeBtn {
+  top: 10%;
+  right: 50px;
+}
+.checkBtn {
+  right: 80px;
+}

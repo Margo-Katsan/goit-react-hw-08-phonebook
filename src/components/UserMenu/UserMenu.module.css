@@ -1,11 +1,21 @@
 .wrapper {
   display: flex;
+  display: flex;
+  gap: 10px;
   padding-left: 20px;
   padding-right: 20px;
 }
 .username {
   margin: 0;
 
-  font-family: 'Ingrid Darling';
-  font-size: 24px;
+  font-family: 'Mate SC';
+  font-size: 16px;
+  color: #d9d9d9;
+}
+.btnLogout {
+  font-family: 'Mate SC';
+
+  background-color: #d9d9d9;
+  color: #3a2302;
+  padding: 3px;
 }

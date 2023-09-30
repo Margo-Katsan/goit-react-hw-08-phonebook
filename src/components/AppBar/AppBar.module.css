@@ -1,20 +1,26 @@
 .header {
+  margin-bottom: 14px;
+  background-color: #3a2302;
+}
+.container {
   display: flex;
+
+  height: 50px;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  margin-bottom: 14px;
+  max-width: 100%;
+  padding: 0 15px;
 }
+
 .bm-menu-wrap {
-  background-color: aqua;
 }
 .bm-burger-button {
   width: 0;
   height: 0;
 }
-@media screen and (min-width: 375px) {
+/* @media screen and (min-width: 375px) {
   .container {
-    max-width: 375px;
+    
   }
 }
 
@@ -29,4 +35,4 @@
   .container {
     max-width: 1200px;
   }
-}
+} */

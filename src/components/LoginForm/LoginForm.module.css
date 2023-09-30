@@ -16,13 +16,27 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 200px;
+  height: 20px;
+  margin-bottom: 8px;
 }
 .input {
   background-color: #d9d9d9;
+  border: 1px solid #8c8375;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.input::placeholder {
+  color: #8c8375;
+}
+.input:focus {
+  outline: none;
   border: 1px solid #3a2302;
 }
 .inputPassword {
-  margin-bottom: 30px;
+  margin-bottom: 8px;
 }
 .btn {
   border-radius: 3px;
@@ -31,4 +45,5 @@
   text-align: center;
 
   font-family: 'Mate SC';
+  margin-top: 8px;
 }

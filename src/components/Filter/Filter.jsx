@@ -9,7 +9,7 @@ export const Filter = () => {
   return (
     <label className={css.filter}>
       Find contacts by name
-      <input type="text" value={filter} onChange={event => {dispatch(changeFilter(event.target.value))}} />
+      <input className={css.input} type="text" value={filter} onChange={event => {dispatch(changeFilter(event.target.value))}} />
     </label>
   )
 }

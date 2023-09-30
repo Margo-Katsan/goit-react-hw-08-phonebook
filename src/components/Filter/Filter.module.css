@@ -1,4 +1,14 @@
 .filter {
   display: flex;
+  justify-content: center;
   gap: 20px;
+  font-family: 'Mate SC';
+  margin-bottom: 24px;
+}
+.input {
+  width: 100px;
+
+  background-color: #d9d9d9;
+  border: 1px solid #8c8375;
+  border-radius: 10px;
 }

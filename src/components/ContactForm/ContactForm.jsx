@@ -18,8 +18,7 @@ export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   
   return (
-    <>
-      <p className={css.mainTitle}>Add contact</p>
+    
     <Formik
       initialValues={{
         name: '',
@@ -65,7 +64,7 @@ export const ContactForm = () => {
           <button className={css.submit} type="submit"><BsFillPersonPlusFill size={32} color='#3A2302'/></button>
       </Form>
     </Formik>
-    </>
+    
     
   );
 }

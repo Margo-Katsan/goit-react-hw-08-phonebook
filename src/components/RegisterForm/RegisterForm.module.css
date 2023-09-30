@@ -1,5 +1,4 @@
 .container {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .form {
   min-height: calc(100vh - 50px);
@@ -19,11 +18,20 @@
 }
 .input {
   background-color: #d9d9d9;
+  border: 1px solid #8c8375;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.input::placeholder {
+  color: #8c8375;
+}
+.input:focus {
+  outline: none;
   border: 1px solid #3a2302;
 }
-.inputPassword {
-  margin-bottom: 30px;
-}
+
 .btn {
   border-radius: 3px;
   background: #3a2302;
@@ -31,4 +39,5 @@
   text-align: center;
 
   font-family: 'Mate SC';
+  margin-top: 8px;
 }
