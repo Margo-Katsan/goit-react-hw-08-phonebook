@@ -12,13 +12,6 @@
   padding: 0 15px;
 }
 
-.bm-menu-wrap {
-}
-.bm-burger-button {
-  width: 0;
-  height: 0;
-}
-
 @media screen and (min-width: 768px) {
   .header {
     margin-bottom: 32px;

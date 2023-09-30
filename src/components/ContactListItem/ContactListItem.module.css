@@ -1,13 +1,13 @@
 .contact {
   position: relative;
-  font-family: 'Mate SC';
+
   width: 100%;
+
+  font-family: 'Mate SC';
 }
 .container {
   display: flex;
-
   padding-left: 40px;
-
   height: 75px;
 
   background-color: transparent;
@@ -29,8 +29,6 @@
 }
 .number {
   margin: 0;
-}
-.userActions {
 }
 .btn {
   display: block;

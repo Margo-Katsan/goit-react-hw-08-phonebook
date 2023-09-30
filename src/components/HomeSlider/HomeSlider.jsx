@@ -29,11 +29,11 @@ export const HomeSlider = () => {
             spaceBetween: 30,
           }
         }}
-      // autoplay={{
-      //     delay: 2500,
-      //     disableOnInteraction: false,
-      // }}
-      // modules={[Autoplay]}
+      autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+      }}
+      modules={[Autoplay]}
     >
       <SwiperSlide style={{display: 'flex', justifyContent: 'center'}} className={css.slide}>
         <ImUserPlus className={`${css.icon} ${css.iconAddUser}`} size={280} color='white' />

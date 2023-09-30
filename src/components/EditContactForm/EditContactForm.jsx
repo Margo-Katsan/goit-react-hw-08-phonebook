@@ -25,6 +25,6 @@ export const EditContactForm = ({onStopChange, onSubmit, name, number}) => {
       </label>
       <button className={`${css.btn} ${css.checkBtn}`} type="submit"><AiOutlineCheckCircle size={20} color='#193300'/></button>
       <button className={`${css.btn} ${css.closeBtn}`} onClick={onStopChange} type="button"><AiOutlineCloseCircle size={20} color='#660000'/></button>
-  </form>
+    </form>
   )
 }

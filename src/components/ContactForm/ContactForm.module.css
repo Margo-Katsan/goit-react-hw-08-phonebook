@@ -26,6 +26,8 @@
   background-color: #d9d9d9;
   border: 1px solid #8c8375;
   border-radius: 10px;
+  padding: 5px 10px;
+  font-family: 'Mate SC';
 }
 .input:focus {
   outline: none;
@@ -43,5 +45,5 @@
   margin: 0;
   font-weight: 400;
   font-size: 14px;
-  color: red;
+  color: #660000;
 }
