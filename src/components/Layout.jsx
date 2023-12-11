@@ -5,12 +5,16 @@ import { Suspense } from 'react';
 
 export const Layout = () => {
   return (
-    <div>
+    <>
       <AppBar />
       <Suspense fallback={null}>
-        <Outlet />
+        <main>
+          <div className='container'>
+            <Outlet />
+          </div>
+        </main>
       </Suspense>
       <Toaster position="top-right" reverseOrder={false} />
-    </div>
+    </>
   );
 };

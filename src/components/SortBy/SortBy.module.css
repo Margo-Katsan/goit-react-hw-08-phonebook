@@ -1,0 +1,83 @@
+.container {
+  position: relative;
+  width: 175px;
+}
+.close {
+  position: absolute;
+  top: 50%;
+  right: 36px;
+  transform: translate(0, -35%);
+}
+.label {
+  display: block;
+  width: 160px;
+  height: 68px;
+}
+.wrapper {
+  width: 100%;
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+  border-radius: 15px;
+  width: 100%;
+
+  height: 35px;
+
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+}
+.placeholder {
+  font-size: 16px;
+  line-height: 1.29;
+
+  color: var(--secondary-text-color);
+}
+.menu {
+  position: absolute;
+  top: 36px;
+  z-index: 1;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  padding-left: 18px;
+  padding-bottom: 14px;
+  padding-right: 18px;
+  border: 0;
+
+  border-radius: 14px;
+  background: var(--secondary-background-color);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.menu::-webkit-scrollbar {
+  width: 6px;
+  height: 68px;
+}
+.menu::-webkit-scrollbar-thumb {
+  background: var(--secondary-elements-color);
+  border-radius: 12px;
+}
+.option {
+  font-size: 14px;
+  line-height: 1.29;
+  padding: 0;
+  transition: color var(--transition-dur-and-func);
+  cursor: pointer;
+}
+.option:hover {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .container {
+    position: relative;
+    width: 175px;
+  }
+  .placeholder {
+    font-size: 16px;
+  }
+}

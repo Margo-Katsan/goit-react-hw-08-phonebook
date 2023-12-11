@@ -1,0 +1,14 @@
+.btn {
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+.favoriteBtn {
+  position: absolute;
+  right: 32px;
+  top: 10%;
+}

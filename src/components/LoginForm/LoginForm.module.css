@@ -1,51 +1,86 @@
-.container {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.section {
+  height: 100vh;
+  padding-top: 60px;
 }
 .form {
-  min-height: calc(100vh - 50px);
   display: flex;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 24px;
+  padding-left: 24px;
 
   flex-direction: column;
-  gap: 6px;
+  gap: 16px;
   align-items: center;
-  justify-content: 'center';
+  background-color: var(--secondary-background-color);
+  border-radius: 15px;
 
-  font-family: 'Mate SC';
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
 .label {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 200px;
-  height: 20px;
-  margin-bottom: 8px;
+  width: 100%;
+}
+.title {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.star {
+  color: var(--accent-color);
+}
+.inputWrapper {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translate(0, -50%);
+  fill: var(--priority-text-color);
+  transition: fill var(--transition-dur-and-func);
 }
 .input {
-  background-color: #e7e7e7;
-  border: 1px solid #8c8375;
-  border-radius: 10px;
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  width: 100%;
+
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding-left: 36px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+
+  font-size: 12px;
+  color: var(--priority-text-color);
+  transition: border-color var(--transition-dur-and-func);
 }
 .input::placeholder {
   color: #8c8375;
 }
 .input:focus {
   outline: none;
-  border: 1px solid #3a2302;
+  border-color: var(--accent-color);
+}
+.input:focus + .icon {
+  fill: var(--accent-color);
 }
 .inputPassword {
   margin-bottom: 8px;
 }
 .btn {
-  border-radius: 3px;
-  padding: 5px 10px;
-  width: 100px;
-  background: #3a2302;
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: var(--accent-color);
+  border: 0;
   color: #d9d9d9;
   text-align: center;
+  font-family: 'Lora', serif;
 
-  font-family: 'Mate SC';
   margin-top: 8px;
+
+  font-size: 14px;
 }

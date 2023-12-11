@@ -1,27 +1,26 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ContactsList } from 'components/ContactsList/ContactsList';
-import { ContactForm } from 'components/ContactForm/ContactForm';
-import { Filter } from 'components/Filter/Filter';
-import { fetchContacts } from 'redux/contacts/operations';
-import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 
-export default function Tasks() {
+import { MainContacts } from 'components/MainContacts/MainContacts';
+import { fetchContacts } from 'redux/contacts/operations';
+import { selectSortBy } from 'redux/contacts/selectors';
+
+import { selectFavorites } from 'redux/contacts/selectors';
+
+
+export default function Contacts() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
+  const sortBy = useSelector(selectSortBy);
+  const favorites = useSelector(selectFavorites)
+
 
   useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+    dispatch(fetchContacts({sort: sortBy}));
+  }, [dispatch, sortBy, favorites]);
 
   return (
-    <div >
-      <ContactForm />
-
-      <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <ContactsList />
-    </div>
+    <>
+      <MainContacts />
+    </>
   );
 }

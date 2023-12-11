@@ -1,0 +1,32 @@
+.burgerMenu {
+  stroke: var(--priority-elements-color);
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  height: 32px;
+  transition: color var(--transition-dur-and-func);
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.modal {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .burgerMenu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .burgerMenu:hover {
+    color: var(--accent-color);
+  }
+}

@@ -1,43 +1,95 @@
 .mainTitle {
   margin: 0;
 
-  font-family: 'Mate SC';
   text-align: center;
 }
 .form {
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 
-  font-family: 'Mate SC';
+  padding: 40px;
+}
+.photoLabel {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.editIcon {
+  position: absolute;
+  right: 40%;
+  bottom: 8px;
+  border-radius: 50%;
+  background-color: rgba(226, 222, 217, 0.9);
 }
 .label {
   display: flex;
   flex-direction: column;
   min-width: 100px;
-  margin-right: 10px;
   font-weight: 700;
 }
+.title {
+  margin-bottom: 6px;
+}
 .input {
-  background-color: #d9d9d9;
+  width: 100%;
+  background-color: transparent;
   border: 1px solid #8c8375;
-  border-radius: 10px;
-  padding: 5px 10px;
-  font-family: 'Mate SC';
+  border-radius: 15px;
+  height: 46px;
+  padding-left: 32px;
+}
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translate(0, -50%);
+  fill: var(--priority-text-color);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.input::placeholder {
+  color: #8c8375;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.input:focus + .icon {
+  fill: var(--accent-color);
 }
 .input:focus {
   outline: none;
   border-color: #3a2302;
 }
+.datePicker {
+  border-radius: 15px;
+  height: 46px;
+  width: 100%;
+}
+
+.calendar {
+  border-radius: 15px;
+  background-color: var(--priority-background-color);
+  padding: 10px;
+}
+
 .submit {
   border: 0;
-  padding: 0;
+  height: 46px;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
 
-  background-color: transparent;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
   cursor: pointer;
 }
 

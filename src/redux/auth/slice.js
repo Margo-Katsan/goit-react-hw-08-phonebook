@@ -31,6 +31,8 @@ const handleRefreshUserFulfilled = (state, action) => {
 
 const handleRefreshUserRejected = state => {
   state.isRefreshing = false;
+  state.token = null;
+  state.isLoggedIn = false;
 }
 
 const authSlice = createSlice({

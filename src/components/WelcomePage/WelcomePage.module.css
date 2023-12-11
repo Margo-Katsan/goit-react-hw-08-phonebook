@@ -1,0 +1,98 @@
+.mainWrapper {
+  padding-top: 40px;
+}
+.slider {
+  height: 390px;
+  max-width: 335px;
+  margin-bottom: 14px;
+}
+.slide {
+  position: relative;
+}
+.title {
+  font-size: 32px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.part {
+  font-size: 46px;
+}
+
+.link {
+  display: block;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.register {
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 370px) {
+  .editIcon {
+    bottom: 105px;
+    right: 50px;
+  }
+  .sortIcon {
+    bottom: 110px;
+    right: 50px;
+  }
+  .searchIcon {
+    bottom: 180px;
+    right: 142px;
+  }
+  .sort {
+    bottom: 90px;
+    right: 80px;
+  }
+  .search {
+    bottom: 190px;
+    right: 0;
+  }
+  .favorite {
+    bottom: 190px;
+    right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainWrapper {
+    width: 635px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .wrapper {
+    width: 260px;
+  }
+  .slider {
+    margin: 0;
+  }
+  .title {
+    font-size: 36px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .part {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainWrapper {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .slider {
+    max-width: 700px;
+  }
+  .wrapper {
+    width: 500px;
+  }
+  .title {
+    font-size: 40px;
+    margin-bottom: 24px;
+    text-align: start;
+  }
+  .part {
+    font-size: 54px;
+  }
+}

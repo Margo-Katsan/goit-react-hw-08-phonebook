@@ -1,24 +1,43 @@
 .filter {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-family: 'Mate SC';
-  margin-bottom: 24px;
+  width: 100%;
 }
 .input {
-  width: 100px;
+  background-color: transparent;
+  height: 35px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding-left: 38px;
 
-  background-color: #d9d9d9;
-  border: 1px solid #8c8375;
-  border-radius: 10px;
-  border-radius: 10px;
-  padding: 5px 10px;
-  font-family: 'Mate SC';
+  transition: border-color var(--transition-dur-and-func);
 }
 .input:focus {
   outline: none;
-  border: 1px solid #3a2302;
+  border: 1px solid var(--accent-color);
 }
+.inputWrapper {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translate(0, -50%);
+  fill: var(--priority-text-color);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.input::placeholder {
+  color: #8c8375;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.input:focus + .icon {
+  fill: var(--accent-color);
+}
+
 @media screen and (min-width: 768px) {
   .filter {
     margin-bottom: 32px;

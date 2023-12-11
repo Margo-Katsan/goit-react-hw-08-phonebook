@@ -1,6 +1,7 @@
 .header {
-  margin-bottom: 24px;
-  background-color: #3a2302;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(140, 131, 117, 0.15);
 }
 .container {
   display: flex;
@@ -9,11 +10,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  padding: 0 15px;
 }
 
 @media screen and (min-width: 768px) {
-  .header {
-    margin-bottom: 32px;
-  }
 }

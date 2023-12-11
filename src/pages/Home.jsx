@@ -1,10 +1,9 @@
-import { HomeSlider } from "components/HomeSlider/HomeSlider";
-
+import { WelcomePage } from 'components/WelcomePage/WelcomePage';
 
 export default function Home() {
   return (
-    <div style={{ paddingLeft: "20px", paddingRight: "20px" }}>
-      <HomeSlider />
-    </div>
+    <>
+      <WelcomePage />
+    </>
   );
 }

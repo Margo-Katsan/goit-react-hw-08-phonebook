@@ -1,5 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact, editContact } from "./operations";
+import { fetchContacts, addContact, deleteContact, editContact, editFavorite, fetchFavorites } from "./operations";
+
+const deleteContactFromList = (contacts, contactId) => {
+  const index = contacts.findIndex(contact => contact._id === contactId);
+  contacts.splice(index, 1);
+}
+
+const editContactFromList = (contacts, updatedContact) => {
+  const index = contacts.findIndex(contact => contact._id === updatedContact._id);
+  contacts.splice(index, 1, updatedContact);
+  
+}
 
 const handlePending = state => {
   state.isLoading = true;
@@ -16,6 +27,12 @@ const handleFetchContactsFulfilled = (state, action) => {
   state.items = action.payload;
 }
 
+const handleFetchFavoritesFulfilled = (state, action) => {
+  state.isLoading = false;
+  state.error = null;
+  state.favorites = action.payload;
+}
+
 const handleAddContactFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
@@ -25,25 +42,45 @@ const handleAddContactFulfilled = (state, action) => {
 const handleDeleteContactFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
-  const index = state.items.findIndex(contact => contact.id === action.payload.id);
-  state.items.splice(index, 1);
+  deleteContactFromList(state.items, action.payload._id)
+  deleteContactFromList(state.favorites, action.payload._id)
 }
 
 const handleEditContactFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
-  const index = state.items.findIndex(contact => contact.id === action.payload.id);
-  state.items.splice(index, 1, action.payload);
+  editContactFromList(state.items, action.payload)
+  editContactFromList(state.favorites, action.payload)
+}
+
+const handleEditFavoriteFulfilled = (state, action) => {
+  state.isLoading = false;
+  state.error = null;
+
+  const isFavoriteExist = state.favorites.filter(favorite => favorite._id === action.payload._id).length !== 0;
+      if (isFavoriteExist) {
+        state.favorites = state.favorites.filter(favorite => action.payload._id !== favorite._id);
+      }
+      else {
+        state.favorites.push(action.payload);
+      }
 }
 
 const contactsSlice = createSlice({
   name: "contacts",
   initialState: {
     items: [],
+    favorites: [],
     isLoading: false,
     error: null,
+    sortBy: ""
   },
-  
+  reducers: {
+    setSortBy(state, action){
+      state.sortBy = action.payload;
+    }
+  },
+    
   extraReducers: builder =>
     builder
       .addCase(fetchContacts.pending, handlePending)
@@ -58,6 +95,13 @@ const contactsSlice = createSlice({
       .addCase(editContact.pending, handlePending)
       .addCase(editContact.fulfilled, handleEditContactFulfilled)
       .addCase(editContact.rejected, handleRejected)
+      .addCase(fetchFavorites.pending, handlePending)
+      .addCase(fetchFavorites.fulfilled, handleFetchFavoritesFulfilled)
+      .addCase(fetchFavorites.rejected, handleRejected)
+  .addCase(editFavorite.pending, handlePending)
+      .addCase(editFavorite.fulfilled, handleEditFavoriteFulfilled)
+      .addCase(editFavorite.rejected, handleRejected)
 });
 
 export const contactsReducer = contactsSlice.reducer;
+export const {setSortBy} = contactsSlice.actions

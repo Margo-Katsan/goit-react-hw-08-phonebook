@@ -1,24 +1,53 @@
 .form {
   display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.editPhoto {
+  position: relative;
+  margin-right: 10px;
+}
+.editIcon {
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: rgba(226, 222, 217, 0.9);
+}
+.info {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  font-family: 'Mate SC';
+  gap: 3px;
 }
 .input {
   background-color: transparent;
+  color: var(--priority-text-color);
   border: 0;
-  font-family: 'Mate SC';
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding-left: 6px;
+
   font-size: 16px;
-  padding: 0;
   line-height: 1.15;
 }
 .input:focus {
   outline: none;
+  background-color: transparent;
 }
 .inputName {
+  width: 150px;
   font-weight: 700;
+}
+.inputPhone {
+  width: 130px;
+}
+.inputBirthday {
+  width: 126px;
+}
+.icon {
+  margin-right: 4px;
 }
 .btn {
   position: absolute;
@@ -30,10 +59,21 @@
 
   cursor: pointer;
 }
+.number,
+.birthday {
+  display: flex;
+  align-items: center;
+}
+
 .closeBtn {
   top: 10%;
-  right: 50px;
+  right: 60px;
 }
 .checkBtn {
-  right: 80px;
+  right: 88px;
+}
+@media screen and (max-width: 767px) {
+  .input {
+    width: 150px;
+  }
 }

@@ -1,4 +1,7 @@
 import { useDispatch } from 'react-redux';
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { FaUserLarge } from "react-icons/fa6";
 import { register } from 'redux/auth/operations';
 import css from './RegisterForm.module.css';
 
@@ -19,20 +22,35 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div className={css.container}>
+    <section className={css.section}>
       <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-      <label className={css.label}>
-        <input className={css.input} type="text" name="name" placeholder="Username"/>
+        <label className={css.label}>
+          <span className={css.title}>Username<span className={css.star}>*</span></span>
+          <div className={css.inputWrapper}>
+            <input className={css.input} type="text" name="name" placeholder="Enter your name" />
+            <FaUserLarge className={`${css.icon} icon`} size={18}/>
+          </div>
+        
       </label>
-      <label className={css.label}>
-        <input className={css.input} type="email" name="email" placeholder="Email"/>
+        <label className={css.label}>
+          <span className={css.title}>Email<span className={css.star}>*</span></span>
+          <div className={css.inputWrapper}>
+            <input className={css.input} type="email" name="email" placeholder="example@gmail.com" />
+            <MdEmail className={`${css.icon} icon`} size={18}/>
+          </div>
+        
       </label>
-      <label className={css.label}>
-          <input className={`${css.input} ${css.inputPassword}`} type="password" name="password" placeholder="Password"/>
+        <label className={css.label}>
+          <span className={css.title}>Password<span className={css.star}>*</span></span>
+          <div className={css.inputWrapper}>
+            <input className={`${css.input} ${css.inputPassword}`} type="password" name="password" placeholder="Enter password min 8 symbol" />
+            <RiLockPasswordFill className={`${css.icon} icon`} size={18}/>
+          </div>
+          
       </label>
-      <button className={css.btn} type="submit">Sing in</button>
+      <button className={css.btn} type="submit">Sing up</button>
     </form>
-    </div>
+    </section>
     
   );
 };
