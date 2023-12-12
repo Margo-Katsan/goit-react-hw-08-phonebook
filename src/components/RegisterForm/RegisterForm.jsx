@@ -49,7 +49,7 @@ export const RegisterForm = () => {
           </div>  
         </label>
 
-        <button className={css.btn} type="submit">Sing up</button>
+        <button className={css.btn} type="submit">Sign up</button>
       </form>
       
     </section>
