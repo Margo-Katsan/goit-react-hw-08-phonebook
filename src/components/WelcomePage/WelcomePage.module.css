@@ -77,9 +77,7 @@
 @media screen and (min-width: 1200px) {
   .mainWrapper {
     width: auto;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    padding-top: 50px;
   }
   .slider {
     max-width: 700px;
@@ -90,7 +88,6 @@
   .title {
     font-size: 40px;
     margin-bottom: 24px;
-    text-align: start;
   }
   .part {
     font-size: 54px;

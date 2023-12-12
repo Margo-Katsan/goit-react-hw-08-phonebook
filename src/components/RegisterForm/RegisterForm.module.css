@@ -2,6 +2,10 @@
   padding-top: 60px;
   height: 100vh;
 }
+.mainTitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
 .form {
   display: flex;
   margin-left: auto;
@@ -48,8 +52,8 @@
 
   background-color: transparent;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding-left: 32px;
+  border-radius: 15px;
+  padding-left: 40px;
   padding-bottom: 10px;
   padding-top: 10px;
 
@@ -68,7 +72,7 @@
 }
 
 .btn {
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 10px 10px;
   width: 100%;
   background-color: var(--accent-color);
@@ -79,4 +83,22 @@
   margin-top: 8px;
 
   font-size: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    max-width: 400px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .input {
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .btn {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 16px;
+  }
 }

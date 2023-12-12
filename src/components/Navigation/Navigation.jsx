@@ -8,14 +8,14 @@ export const Navigation = () => {
   return (
     <nav className={css.nav}>
       {isLoggedIn && (
-        <><NavLink className={css.link} to="/contacts">
-          Contacts
-        </NavLink>
-        <NavLink className={css.link} to="/favorites">
-          Favorites
-        </NavLink>
-        </>
-        
+        <>
+          <NavLink className={css.link} to="/contacts">
+            Contacts
+          </NavLink>
+          <NavLink className={css.link} to="/favorites">
+            Favorites
+          </NavLink>
+        </> 
       )}
     </nav>
   );

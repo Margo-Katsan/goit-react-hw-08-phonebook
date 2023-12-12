@@ -23,34 +23,35 @@ export const RegisterForm = () => {
 
   return (
     <section className={css.section}>
+      <h1 className={css.mainTitle}>Registration</h1>
       <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
         <label className={css.label}>
-          <span className={css.title}>Username<span className={css.star}>*</span></span>
+          <span className={css.title}>Username <span className={css.star}>*</span></span>
           <div className={css.inputWrapper}>
             <input className={css.input} type="text" name="name" placeholder="Enter your name" />
             <FaUserLarge className={`${css.icon} icon`} size={18}/>
           </div>
-        
-      </label>
+        </label>
+
         <label className={css.label}>
-          <span className={css.title}>Email<span className={css.star}>*</span></span>
+          <span className={css.title}>Email <span className={css.star}>*</span></span>
           <div className={css.inputWrapper}>
             <input className={css.input} type="email" name="email" placeholder="example@gmail.com" />
             <MdEmail className={`${css.icon} icon`} size={18}/>
           </div>
-        
-      </label>
+        </label>
+
         <label className={css.label}>
-          <span className={css.title}>Password<span className={css.star}>*</span></span>
+          <span className={css.title}>Password <span className={css.star}>*</span></span>
           <div className={css.inputWrapper}>
             <input className={`${css.input} ${css.inputPassword}`} type="password" name="password" placeholder="Enter password min 8 symbol" />
             <RiLockPasswordFill className={`${css.icon} icon`} size={18}/>
-          </div>
-          
-      </label>
-      <button className={css.btn} type="submit">Sing up</button>
-    </form>
+          </div>  
+        </label>
+
+        <button className={css.btn} type="submit">Sing up</button>
+      </form>
+      
     </section>
-    
   );
 };

@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from 'react';
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
+import { MdModeEdit } from "react-icons/md";
+import { Avatar } from '@mui/material';
+import { MdAddAPhoto } from "react-icons/md";
 import { FaUserLarge } from "react-icons/fa6";
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { FaCalendarDays } from "react-icons/fa6";
@@ -11,9 +14,6 @@ import { MdCake } from "react-icons/md";
 import * as Yup from 'yup';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
-import { MdModeEdit } from "react-icons/md";
-import { Avatar } from '@mui/material';
-import { MdAddAPhoto } from "react-icons/md";
 import css from './ContactForm.module.css'
  
 const schema = Yup.object().shape({
@@ -50,7 +50,7 @@ export const ContactForm = ({onClose}) => {
     }
 
     if (birthday !== "") {
-      dispatch(addContact({ ...values, birthday, avatarURL: fileAvatar }))
+      dispatch(addContact({ ...values, birthday: `${new Date(birthday).getFullYear()}-${new Date(birthday).getMonth() + 1}-${new Date(birthday).getDate()}`, avatarURL: fileAvatar }))
     }
     else {
       dispatch(addContact({ ...values, avatarURL: fileAvatar }))
@@ -132,6 +132,8 @@ export const ContactForm = ({onClose}) => {
               calendarIcon={<FaCalendarDays size={20} color="var(--priority-text-color)" />}
               format={"dd.MM.y"}
               openCalendarOnFocus={false}
+              maxDate={new Date()}
+              minDate={new Date("1900-01-01")}
             />
             <MdCake className={`${css.icon} icon`} size={20}/>
           </div>

@@ -14,6 +14,7 @@ export const EditContactForm = ({ onStopChange, onSubmit, contact }) => {
   const [editedNumber, setEditedNumber] = useState(phone);
   const [editedAvatar, setEditedAvatar] = useState(null);
   const initialStateBirthday = birthday ? new Date(birthday).toISOString().slice(0, 10) : "";
+
   const [editedBirthday, setEditedBirthday] = useState(initialStateBirthday);
   const handleNameChange = (e) => {
     setEditedName(e.target.value);
@@ -24,6 +25,7 @@ export const EditContactForm = ({ onStopChange, onSubmit, contact }) => {
   };
 
   const handleBirthdayChange = (e) => {
+    console.log(e.target.value)
     setEditedBirthday(e.target.value);
   }
 
@@ -70,8 +72,15 @@ export const EditContactForm = ({ onStopChange, onSubmit, contact }) => {
         <label>
           <div className={css.birthday}>
             <MdCake className={`${css.icon} icon`} size={20} />
-            <input name="birthday" min="1990-01-01" max="2023-01-01" pattern="\d{2}-\d{2}-\d{4}" className={`${css.input} ${css.inputBirthday}`} value={editedBirthday} type='date' onChange={handleBirthdayChange} ></input>
-            
+            <input
+              name="birthday"
+              min="1990-01-01"
+              max="2023-01-01"
+              pattern="\d{2}-\d{2}-\d{4}"
+              className={`${css.input} ${css.inputBirthday}`}
+              value={editedBirthday}
+              type='date'
+              onChange={handleBirthdayChange} />
           </div>
         </label>
       </div>
